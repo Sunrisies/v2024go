@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="[--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]">
+  {{template "common/head" .}}
+  <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+    <div class="space-y-10">
+      <header class="relative">
+        <div class="px-4 sm:px-6 md:px-10 lg:px-12 pb-10">
+          <div class="absolute inset-0 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120]">
+            <div class="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5" style="mask-image:linear-gradient(to bottom, transparent, black);-webkit-mask-image:linear-gradient(to bottom, transparent, black)"></div>
+          </div>
+          <div class="relative pt-4 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
+            <!-- Logo -->
+            <a href="/">
+              <picture>
+                <source srcset="/img/asouldocs-dark.png" media="(prefers-color-scheme: dark)">
+                <img src="/img/asouldocs-light.png" style="height: 28px">
+              </picture>
+            </a>
+            <div class="flex items-center">
+              <!-- <button type="button" class="text-slate-500 hover:text-slate-600 mr-4 w-8 h-8 -my-1 flex items-center justify-center md:hidden dark:hover:text-slate-300">
+                <span class="sr-only">Search</span>
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 19-3.5-3.5"></path><circle cx="11" cy="11" r="6"></circle></svg>
+              </button> -->
+              <div class="flex items-center">
+                <nav>
+                  {{template "common/navbar" .}}
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+            <h1 class="text-slate-900 font-extrabold italic text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
+              {{call .Tr "home::title"}}
+            </h1>
+            <p class="mt-6 text-lg lg:text-xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
+              {{call .Tr "home::tag_line"}}
+            </p>
+            <div class="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
+              <a class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400" href="{{.Page.DocsBasePath}}">
+                {{call .Tr "home::get_started"}}
+              </a>
+              <!-- <button type="button" class="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="flex-none text-slate-300 dark:text-slate-400"
+                  aria-hidden="true"
+                >
+                  <path d="m19 19-3.5-3.5"></path>
+                  <circle cx="11" cy="11" r="6"></circle>
+                </svg>
+                <span class="flex-auto">Quick search...</span>
+                <kbd class="font-sans font-semibold dark:text-slate-500">
+                  <abbr title="Command" class="no-underline text-slate-300 dark:text-slate-500">⌘</abbr>
+                  K
+                </kbd>
+              </button> -->
+            </div>
+          </div>
+        </div>
+      </header>
+   
+
+      <!-- <footer class="pb-5 text-sm leading-6">
+        <div class="max-w-7xl mx-auto divide-y divide-slate-200 px-4 sm:px-6 md:px-8 dark:divide-slate-700">
+         
+          <div class="mt-10 pt-5 text-center">
+            © {{Year}} {{call .Tr "footer::copyright"}}
+          </div>
+        </div>
+      </footer> -->
+    </div>
+  </body>
+</html>
